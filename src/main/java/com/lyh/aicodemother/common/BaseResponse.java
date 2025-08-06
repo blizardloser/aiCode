@@ -6,6 +6,10 @@ import lombok.Data;
 
 import java.io.Serializable;
 
+/**
+ *
+ * @param <T>
+ */
 @Data
 public class BaseResponse<T>  implements Serializable {
 
