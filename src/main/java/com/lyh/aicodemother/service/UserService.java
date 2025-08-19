@@ -1,9 +1,14 @@
 package com.lyh.aicodemother.service;
 
+import com.lyh.aicodemother.model.Dto.user.UserQueryRequest;
 import com.lyh.aicodemother.model.vo.LoginUserVO;
+import com.lyh.aicodemother.model.vo.UserVo;
+import com.mybatisflex.core.query.QueryWrapper;
 import com.mybatisflex.core.service.IService;
 import com.lyh.aicodemother.model.entity.User;
 import jakarta.servlet.http.HttpServletRequest;
+
+import java.util.List;
 
 /**
  * 用户 服务层。
@@ -51,6 +56,11 @@ public interface UserService extends IService<User> {
      */
     boolean userLogout(HttpServletRequest request);
 
+    UserVo getUserVo(User user);
+
+    List<UserVo> getUserVoList(List<User> users);
+
+    QueryWrapper getQueryWrapper(UserQueryRequest userQueryRequest);
 
 
 }

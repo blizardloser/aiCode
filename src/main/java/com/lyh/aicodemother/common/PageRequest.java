@@ -16,6 +16,11 @@ public class PageRequest {
     private int pageSize = 10;
 
     /**
+     * 当前页号
+     */
+    private int pageNum = 1;
+
+    /**
      * 排序字段
      */
     private String sortField;
